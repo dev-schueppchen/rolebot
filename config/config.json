@@ -3,6 +3,7 @@
     {
       "tags": ["amongus", "au", "crewmate"],
       "name": "Crewmate",
+      "description": "Among Us Players",
       "mentionable": true,
       "hoisted": false,
       "color": 0

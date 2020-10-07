@@ -39,7 +39,12 @@ client.on('message', async (msg) => {
 
   if (!content) {
     const roles = Config.roles
-      .map((r) => `- **@${r.name}**: ${r.tags.join(', ')}`)
+      .map(
+        (r) =>
+          `- **@${r.name}**: ${r.description} - Tags: ${r.tags
+            .map((t) => '`' + t + '`')
+            .join(', ')}`
+      )
       .join('\n');
 
     msg.reply(
