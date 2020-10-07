@@ -1,0 +1,11 @@
+{
+  "roles": [
+    {
+      "tags": ["amongus", "au", "crewmate"],
+      "name": "Crewmate",
+      "mentionable": true,
+      "hoisted": false,
+      "color": 0
+    }
+  ]
+}
