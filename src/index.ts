@@ -15,6 +15,12 @@ log.level = 'info';
 
 client.on('ready', () => {
   log.info(`Logged in as ${client.user?.tag}`);
+  client.user?.setPresence({
+    activity: {
+      type: 'CUSTOM_STATUS',
+      name: 'Mention me!',
+    },
+  });
 });
 
 client.on('message', async (msg) => {
