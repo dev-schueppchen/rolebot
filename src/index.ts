@@ -2,7 +2,6 @@
 
 import Discord from 'discord.js';
 import Log4js from 'log4js';
-import Secrets from '../config/secrets.json';
 import Config from '../config/config.json';
 
 const log = Log4js.getLogger('main');
@@ -117,8 +116,9 @@ client.on('message', async (msg) => {
 (async () => {
   log.info(`Connecting to Discord...`);
   try {
-    await client.login(Secrets.token);
+    await client.login(process.env['DISCORD_TOKEN']);
   } catch (e) {
     log.fatal('Failed connecting to discord: ', e);
+    process.exit();
   }
 })();
